@@ -245,7 +245,7 @@
 .products-board {
   height: 75vh;
   width: 90%;
-  background-color: wheat;
+  background-color: transparent;
   margin: 0 auto;
 
   display: grid;
@@ -256,12 +256,18 @@
   grid-auto-rows: 1fr;
   column-gap: 30px;
   row-gap: 10px;
-  padding: 10px;
+  padding: 10px 20px;
+}
+
+.card-shadow {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 .products-item {
-  background-color: blue;
-  border: thin solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .products-loader {
@@ -272,3 +278,63 @@
 }
 
 /* lam product card */
+.item-thumb {
+  width: 100%;
+  height: 60%;
+}
+
+.item-thumb img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.item-detail {
+  width: 100%;
+  height: 40%;
+  background-color: white;
+}
+
+.item-button {
+  position: relative;
+  width: 100%;
+  height: 20%;
+}
+
+.btn-cart {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-weight: bold;
+  background-color: #ff7200;
+  border-radius: 50px;
+
+  border: 0.1px #cc682a solid;
+  box-shadow: 0px 2px 10px 0px #ff7200;
+  width: 70%;
+  height: 150%;
+
+  cursor: pointer;
+}
+
+.card-title {
+  margin-top: 2px;
+  font-weight: bold;
+  color: black;
+  font-size: 1.5em;
+}
+.card-price {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff7200;
+}
+.card-price::after {
+  content: " VNĐ";
+}
+
+.card-sale {
+  color: red;
+}
